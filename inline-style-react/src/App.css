@@ -1,0 +1,28 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.main div {
+  width: 7rem;
+  height: 0.3rem;
+  transition: 2s;
+  margin: 1rem 0;
+  box-shadow: 0 0 1rem 0 #ff56138e, 0 0 0.2rem 0 #eb916e8e,
+    inset 0 0 0.21rem 0 #00000060, inset 0 0 0.36rem 0 #95eb8f4f;
+}
+
+.main {
+  cursor: none;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px 0px #ff56138e, 0px 0px 20px 0px #ff56138e;
+  background: linear-gradient(-90deg, #ff56130c, #292929);
+}

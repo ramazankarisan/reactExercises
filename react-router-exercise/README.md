@@ -11,3 +11,6 @@
 ## What I coded
 
 - all components, files and etc. were created from the beginning. It was for trying and exercising the react-router-dom.
+
+
+> some parts were commented, because there was some other tasks to carry out, but due to lack of time I could not complete tehm all, maybe in the future.

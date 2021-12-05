@@ -1,11 +1,13 @@
 # About Me - Project in React
 
-This project is a React web-app that is similar to a classic user's homepage.
+> This project actually consisted of a couple of different tasks. I had carried out just one of them. Style and functionality were ignored mainly. The main aim was to exercise `react-router-dom`.
 
-It implements the following React technologies:
+- Navbar component create and make a simple about me website.
 
-1. `BrowserRouter`, `Routes`, `Route` & `Link` for Task 1
-2. onChange/onClick-events, conditional rendering for Task 2 (Advanced)
-3. onClick, conditional styling for Task 3 (Advanced)
+## What were provided
 
-### Check out the detailed explination about the task in **`task.pdf`**.
+- Just the basic design of it was certain but mainly everything was up to assignee of the task.
+
+## What I coded
+
+- all components, files and etc. were created from the beginning. It was for trying and exercising the react-router-dom.

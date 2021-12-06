@@ -1,27 +1,15 @@
 # React Router Dog Finder
 
-Build an app that routes to different dogs and displays information on that dog when you're at that route.
+## Tasks:
 
-The routes look like this:
+- Build an app that routes to different dogs and displays information on that dog when you're at that route.
 
-- `/dogs` is the homepage and shows all three dogs
-- Clicking on a dog from the homepage takes you to that dog's route. For example clicking on Whiskey will take you to `/dogs/whiskey`.
-- `/` and every other endpoint not listed should redirect you to `/dogs`.
+## What were provided:
 
-Here's an image of what the app looks like. It should look the same once you've refactored it!
+- The engaging and dealing with the routing was the main of this assginment.
+- From the start I coded it.
 
-![dog finder app](./dog-finder.gif)
+## What I did:
 
-`hint`:
-App has two routes:
-
-`/dogs`
-`/dogs/:name`
-
-Both of them render the `Dogs` component.
-
-`Dogs` maps over the dog info, and renders a `Dog` component for each dog.
-
-`Dogs` passes the route parameter, `name`, down as `currentDog` if there is one.
-
-The `Dog` component renders extra info if there it `this.props.currentDog` exists.
+- `App.js` , components `Dogs.js` and `Dog` I coded and used the things about react-router-dom like `useParams`, `useNavigate`, `BrowserRouter, Routes, Route, Link`.
+- Added some style and conditional inline styling.

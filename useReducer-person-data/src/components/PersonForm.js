@@ -13,19 +13,19 @@ const PersonForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label> Name:</label>
+        <div className="personInputDiv">
+          <label> Name: </label>
           <input onChange={(e) => setPerson({ ...person, name: e.target.value })} type="text" name="name" id="" />
         </div>
-        <div>
-          <label> Email:</label>
+        <div className="personInputDiv">
+          <label> Email: </label>
           <input onChange={(e) => setPerson({ ...person, email: e.target.value })} type="email" name="name" id="" />
         </div>
-        <div>
-          <label> Phone:</label>
+        <div className="personInputDiv">
+          <label> Phone: </label>
           <input onChange={(e) => setPerson({ ...person, phone: e.target.value })} type="text" name="name" id="" />
         </div>
-        <div>
+        <div className="personSubmitDiv">
           <button type="submit">Submit</button>
         </div>
       </form>

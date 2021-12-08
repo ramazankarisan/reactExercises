@@ -25,24 +25,29 @@ const PersonState = (props) => {
 
       return [...state, action.data]
 
+
     } else if (action.type === 'delete') {
 
       return state.filter((item, i) => i !== action.data)
 
     } else if (action.type === 'edit') {
       handleShowEdit()
-      console.log(action.data);
-      setPerson(action.data);
+      setPerson({ ...action.data, index: action.index });
+      console.log(action);
+      console.log(state);
+      return state
+    } else if (action.type === 'editSubmit') {
+      console.log(person);
+      console.log(state);
+      console.log(person.index);
+      state[person.index] = { name: person.name, email: person.email, phone: person.phone }
+
       return state
     }
     return state
   }
-
-
-
-
   return (
-    <PersonContext.Provider value={{ state, dispatch, handleClose, handleShow, show, person, setPerson, showEdit, handleCloseEdit }}>
+    <PersonContext.Provider value={{ state, dispatch, handleClose, handleShow, show, person, setPerson, showEdit, handleCloseEdit, reducer }}>
       {props.children}
     </PersonContext.Provider>
   )

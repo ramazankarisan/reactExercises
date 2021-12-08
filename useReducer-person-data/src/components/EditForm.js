@@ -1,20 +1,17 @@
 import React, { useContext } from 'react'
 import { PersonContext } from '../context/PersonContext';
 
-const PersonForm = () => {
-  const { dispatch, handleClose, handleCloseEdit, person, setPerson } = useContext(PersonContext)
+const EditForm = () => {
+  const { dispatch, handleCloseEdit, person, setPerson } = useContext(PersonContext)
 
-
-
-  function handleSubmit(e) {
+  function handleEdit(e) {
     e.preventDefault();
-    dispatch({ type: 'submit', data: person })
-    handleClose();
-    handleCloseEdit()
+    dispatch({ type: 'editSubmit', data: person })
+    handleCloseEdit();
   }
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleEdit}>
         <div className="personInputDiv">
           <label> Name: </label>
           <input onChange={(e) => setPerson({ ...person, name: e.target.value })} type="text" name="name" value={person.name} />
@@ -28,11 +25,11 @@ const PersonForm = () => {
           <input onChange={(e) => setPerson({ ...person, phone: e.target.value })} type="text" name="phone" value={person.phone} />
         </div>
         <div className="personSubmitDiv">
-          <button type="submit">Submit</button>
+          <button type="submit">Edit Person</button>
         </div>
       </form>
     </div>
   )
 }
 
-export default PersonForm
+export default EditForm

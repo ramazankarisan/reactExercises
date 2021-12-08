@@ -7,6 +7,8 @@ function AddModal() {
   const { show, handleClose } = useContext(PersonContext)
   return (
     <>
+
+      {/* component,  when it is shown, we will see a form, which enables to add a new person info */}
       <Modal
         show={show}
         onHide={handleClose}
@@ -17,7 +19,10 @@ function AddModal() {
           <Modal.Title>Add Person</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+
+          {/* this form will let us submit some new data and we will see it in PersonList component */}
           <PersonForm />
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

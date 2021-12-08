@@ -21,27 +21,28 @@ const PersonState = (props) => {
 
   function reducer(state, action) {
 
+    // to add at the end of our state
     if (action.type === 'submit') {
 
       return [...state, action.data]
 
-
-    } else if (action.type === 'delete') {
+    }
+    // to delete from the state
+    else if (action.type === 'delete') {
 
       return state.filter((item, i) => i !== action.data)
 
-    } else if (action.type === 'edit') {
+    }
+    // when edit button is clicked, we see edit modal and form, also save the item index in our person variable
+    else if (action.type === 'edit') {
       handleShowEdit()
       setPerson({ ...action.data, index: action.index });
-      console.log(action);
-      console.log(state);
       return state
-    } else if (action.type === 'editSubmit') {
-      console.log(person);
-      console.log(state);
-      console.log(person.index);
+    }
+    // submit to edit
+    else if (action.type === 'editSubmit') {
+      // to save the updated person infos in our state
       state[person.index] = { name: person.name, email: person.email, phone: person.phone }
-
       return state
     }
     return state

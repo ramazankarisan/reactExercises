@@ -29,14 +29,13 @@ function PersonList() {
                 <th>{item.phone}</th>
                 <th style={{ width: '150px' }}>
 
-                  {/* edit button */}
+                  {/* edit button, it shows us EditModal an inside of it we have EditForm */}
                   <button style={{ margin: '0 30px', border: '0px' }} onClick={() => dispatch({ type: 'edit', data: item, index: index })}>
                     <FontAwesomeIcon style={{ color: 'darkgreen' }} icon={faUserEdit} />
                   </button>
                   <EditModal />
 
                   {/* delete button */}
-
                   <button style={{ border: '0px' }} onClick={() => dispatch({ type: 'delete', data: index })}> <FontAwesomeIcon icon={faTrashAlt} style={{ color: 'red' }} />
                   </button>
                 </th>

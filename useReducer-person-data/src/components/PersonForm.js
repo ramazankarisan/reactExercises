@@ -2,15 +2,15 @@ import React, { useContext } from 'react'
 import { PersonContext } from '../context/PersonContext';
 
 const PersonForm = () => {
-  const { dispatch, handleClose, handleCloseEdit, person, setPerson } = useContext(PersonContext)
-
-
+  const { dispatch, handleClose, person, setPerson } = useContext(PersonContext)
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    // it assign the action values like this and then inside reducer function we will add this info in our state
     dispatch({ type: 'submit', data: person })
+
     handleClose();
-    handleCloseEdit()
   }
   return (
     <div className="App">

@@ -18,7 +18,10 @@ function EditModal() {
           <Modal.Title>Edit Person</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+
+          {/* it allows us to edit the list item that we chose by clicking the edit button on the right */}
           <EditForm />
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseEdit}>

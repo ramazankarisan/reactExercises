@@ -6,7 +6,10 @@ const EditForm = () => {
 
   function handleEdit(e) {
     e.preventDefault();
+
+    // it save the change in the form that we made and we see them once again in the state as updated version
     dispatch({ type: 'editSubmit', data: person })
+
     handleCloseEdit();
   }
   return (

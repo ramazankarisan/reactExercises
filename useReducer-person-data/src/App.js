@@ -12,7 +12,7 @@ function App() {
     <PersonState>
       <NavbarComp />
       <PersonList />
-      <PersonView />
+      {/* <PersonView /> */}
 
     </PersonState>
   );

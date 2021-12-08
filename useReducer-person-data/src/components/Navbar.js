@@ -6,7 +6,7 @@ import AddModal from './AddModal';
 
 
 const NavbarComp = () => {
-  const { handleShow } = useContext(PersonContext)
+  const { handleShow, setPerson } = useContext(PersonContext)
 
   return (
     <>
@@ -16,7 +16,7 @@ const NavbarComp = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <Button onClick={handleShow} variant="success">Add Person</Button>
+              <Button onClick={() => { handleShow(); setPerson({ name: '', email: '', phone: '' }) }} variant="success">Add Person</Button>
               <AddModal />
             </Navbar.Text>
           </Navbar.Collapse>

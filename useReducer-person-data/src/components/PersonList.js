@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Table } from 'react-bootstrap'
+import { PersonContext } from '../context/PersonContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt, faUserEdit } from '@fortawesome/free-solid-svg-icons';
+import EditModal from './EditModal';
 
 function PersonList() {
+  const { state, dispatch } = useContext(PersonContext);
   return (
     <>
       <Table striped bordered hover>
@@ -11,26 +16,28 @@ function PersonList() {
             <th> Name</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Actions</th>
+
           </tr>
         </thead>
         <tbody>
-          <tr>
-
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {state.map((item, index) => {
+            return (
+              <tr key={index}  >
+                <th>{item.name}</th>
+                <th>{item.email}</th>
+                <th>{item.phone}</th>
+                <th style={{ width: '150px' }}>
+                  <button style={{ margin: '0 30px', border: '0px' }} onClick={() => dispatch({ type: 'edit', data: item })}>
+                    <FontAwesomeIcon style={{ color: 'darkgreen' }} icon={faUserEdit} />
+                  </button>
+                  <EditModal />
+                  <button style={{ border: '0px' }} onClick={() => dispatch({ type: 'delete', data: index })}> <FontAwesomeIcon icon={faTrashAlt} style={{ color: 'red' }} />
+                  </button>
+                </th>
+              </tr>
+            )
+          })}
         </tbody>
       </Table>
     </>

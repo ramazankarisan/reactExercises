@@ -3,15 +3,15 @@ import { PersonContext } from '../context/PersonContext';
 
 const PersonForm = () => {
   const { dispatch } = useContext(PersonContext)
-  const [person, setPerson] = useState({ name: '', email: '', phone: '' })
 
+  const [person, setPerson] = useState({ name: '', email: '', phone: '' })
 
   function handleSubmit(e) {
     e.preventDefault();
     dispatch({ type: 'submit', data: person })
   }
   return (
-    <div>
+    <div className="App">
       <form onSubmit={handleSubmit}>
         <div className="personInputDiv">
           <label> Name: </label>

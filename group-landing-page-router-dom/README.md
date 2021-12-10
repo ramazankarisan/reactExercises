@@ -1,15 +1,12 @@
-# SPA-Router-band-landing-page
+# Router-band-landing-page
 
-Create a small React app for your favorite music band.  
-Your navigation should contain as many items as the members of your band (4+ members. We all like Daft Punk and The White Stripes, but we need more routes).  
-Use the [react-router](https://reactrouter.com/) package to handle your navigation.  
-Your solution doesn't have to have any transitions by default.
+## Tasks
 
-![](preview.gif)
+- Create a small React app for a music band.
+- Your navigation should contain as many items as the members of your band (4+ members).
+- Use the [react-router](https://reactrouter.com/) package to handle your navigation.
+- Your solution doesn't have to have any transitions by default.
 
-#### BONUS
+## What were provided and what I did:
 
-You can experiment with transitions between pages as well. Here are some interesting libraries:
-
-- https://reactcommunity.org/react-transition-group/
-- https://www.framer.com/motion/
+- From the beginning, I did the components and `App.js`. I know it is so simple but in the future I can update it and upgrade it.

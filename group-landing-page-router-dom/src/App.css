@@ -1,0 +1,47 @@
+body {
+  background-color: gray;
+}
+/* logo photo */
+.logoDiv {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#logo {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px black, -5px -5px 5px black;
+}
+#logo:hover {
+  box-shadow: -5px 5px 5px black, 5px -5px 5px black;
+}
+/* nav list */
+.card {
+  width: 500px;
+  margin: 50px auto;
+}
+.card img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+nav ul li {
+  list-style-type: none;
+  float: left;
+  margin-right: 20px;
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+}
+a:hover {
+  color: brown;
+}
+nav {
+  height: 50px;
+  width: 500px;
+  margin: 50px auto;
+}
